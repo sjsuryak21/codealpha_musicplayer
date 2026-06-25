@@ -1,0 +1,104 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #4b006e, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 1s ease; /* smooth transition */
+}
+
+.player-container {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background: rgba(0,0,0,0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 30px gold;
+  border: 2px solid gold;
+  overflow: hidden;
+}
+
+/* Left side playlist */
+.playlist-panel {
+  width: 40%;
+  padding: 20px;
+  border-right: 2px solid gold;
+  overflow-y: auto;
+}
+.playlist-panel h2 {
+  color: gold;
+  text-align: center;
+}
+.playlist-panel ul {
+  list-style: none;
+  padding: 0;
+}
+.playlist-panel li {
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,215,0,0.3);
+}
+.playlist-panel li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 2px solid gold;
+}
+.playlist-panel li:hover {
+  background: rgba(255,215,0,0.2);
+}
+
+/* Right side current song */
+.current-panel {
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+}
+.current-panel h2, .current-panel h3 {
+  margin: 5px 0;
+  color: gold;
+  text-shadow: 1px 1px 3px black;
+}
+.cover img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;   /* circular album cover */
+  margin: 15px auto;
+  object-fit: cover;
+  border: 6px solid gold;
+  box-shadow: 0 0 25px rgba(255,215,0,0.9);
+}
+.controls button {
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  background: gold;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  color: #4b006e;
+  transition: 0.3s;
+}
+.controls button:hover {
+  background: #fff;
+  color: #4b006e;
+  box-shadow: 0 0 12px gold;
+}
+.progress-container, .volume-container {
+  margin: 15px 0;
+}
+input[type="range"] {
+  width: 85%;
+  accent-color: gold;
+}
+.playlist-panel li.active {
+  background: rgba(255,215,0,0.3);
+  box-shadow: 0 0 12px gold;
+  border-radius: 8px;
+}

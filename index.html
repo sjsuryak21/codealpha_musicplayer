@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tamil Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-container">
+    
+    <!-- Left side: Playlist -->
+    <div class="playlist-panel">
+      <h2>🎶 Playlist</h2>
+      <ul id="playlist"></ul>
+    </div>
+    
+    <!-- Right side: Current Song -->
+    <div class="current-panel">
+      <h2 id="title">Song Title</h2>
+      <h3 id="artist">Artist Name</h3>
+      
+      <div class="cover">
+        <img id="cover" src="" alt="Album Cover">
+      </div>
+      
+      <audio id="audio"></audio>
+      
+      <div class="controls">
+        <button id="prev">⏮️</button>
+        <button id="play">▶️</button>
+        <!-- <button id="pause">⏸️</button> -->
+        <button id="next">⏭️</button>
+        <button id="shuffle">🔀</button>
+      </div>
+      
+      <div class="progress-container">
+        <input type="range" id="progress" value="0" step="1">
+        <span id="duration">00:00</span>
+      </div>
+      
+      <div class="volume-container">
+        <label>🔊</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Hidden canvas for color extraction -->
+  <canvas id="colorCanvas" style="display:none;"></canvas>
+  
+  <script src="script.js"></script>
+</body>
+</html>
